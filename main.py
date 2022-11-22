@@ -1,29 +1,30 @@
 from menu import products
-from managments.products_handle import get_product_by_id, get_products_by_type, menu_report, add_product, calculate_tab
+from management.product_handler import get_product_by_id, get_products_by_type, menu_report, add_product
+from management.tab_handler import calculate_tab
 
 
 if __name__ == "__main__":
     # Seus prints de teste aqui
     ...
-    # res_product_by_id = get_product_by_id(32)
-    # print(res_product_by_id)
+    get_product_by_id()
+    get_products_by_type()
+    menu_report()
 
-    # res_products_by_type = get_products_by_type("fruit")
-    # print(res_products_by_type)
+    new_product = {
 
-    # res_menu_report = menu_report()
-    # print(res_menu_report)
+        "title": "X-Python",
+        "price": 5.0,
+        "rating": 5,
+        "description": "Sanduiche de Python",
+        "type": "fast-food"
+    }
+    table_1 = [{"_id": 1, "amount": 5}, {"_id": 19, "amount": 5}]
+    table_2 = [
+        {"_id": 10, "amount": 3},
+        {"_id": 20, "amount": 2},
+        {"_id": 21, "amount": 5},
+    ]
 
-    # product = {
-    #   "title": "Suco de Limão",
-    #   "price": 3.0,
-    #   "rating": 5,
-    #   "description": "Suco de limão",
-    #   "type": "drink"
-    # }
-    # res_add_product = add_product(products, product)
-    # print(res_add_product)
-
-    table_1 = [{"_id": 7, "amount": 5}, {"_id": 2, "amount": 5}]
-    res_calculate_tab = calculate_tab(table_1)
-    print(res_calculate_tab)
+    add_product()
+    calculate_tab()
+    print(calculate_tab(table_2))
