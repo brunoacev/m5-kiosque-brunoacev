@@ -27,4 +27,3 @@ if __name__ == "__main__":
 
     add_product()
     calculate_tab()
-    print(calculate_tab(table_2))
